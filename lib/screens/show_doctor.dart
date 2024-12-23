@@ -182,29 +182,63 @@ class ShowDoctor extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded(
-                child: Container(
-                  width: double.infinity,
-                  padding: EdgeInsets.fromLTRB(25, 0, 25, 25),
-                  decoration: BoxDecoration(
-                    color: AppColors.white,
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.elliptical(45, 65),
-                    ),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.fromLTRB(25, 0, 25, 25),
+                decoration: BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.elliptical(45, 65),
                   ),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 24),
-                      Text(
-                        'Dr. Kawsar Ahmed',
-                        style: TextStyles.s20w500black,
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 24),
+                    Text(
+                      'Dr. Kawsar Ahmed',
+                      style: TextStyles.s20w500black,
+                    ),
+                    Text(
+                      'Cardiologist- Cumilla Madical Collage',
+                      style: TextStyles.s10w400black,
+                    ),
+                    SizedBox(height: 2),
+                    Row(
+                      spacing: 2,
+                      mainAxisSize: MainAxisSize.min,
+                      children: List.generate(
+                        5,
+                        (index) =>
+                            SvgPicture.asset('assets/svg/staryellow.svg'),
                       ),
-                      Text(
-                        'Cardiologist- Cumilla Madical Collage',
-                        style: TextStyles.s10w400black,
+                    ),
+                    SizedBox(height: 19),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'About Doctor',
+                        style: TextStyles.s16w400black,
                       ),
-                      SizedBox(height: 2),
-                      Row(
+                    ),
+                    SizedBox(height: 12),
+                    Text(
+                      "Dr. Kawsar Ahmed is the top most Cardiologist  specialist in Cumilla Medical Collage Hospital At   Cumilla. He achived several awards foe his wonderful confriution in his own field. He isavaliable for privet consulatation. He achivedseveral awards foe his wonderful confriution inhis own field. He is avaliable for privet consulatation.  ",
+                      style: TextStyles.s14w400black,
+                    ),
+                    SizedBox(height: 12),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Recent comments',
+                        style: TextStyles.s16w400black,
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: AppColors.black,
+                      ),
+                      title: Row(
                         spacing: 2,
                         mainAxisSize: MainAxisSize.min,
                         children: List.generate(
@@ -213,51 +247,8 @@ class ShowDoctor extends StatelessWidget {
                               SvgPicture.asset('assets/svg/staryellow.svg'),
                         ),
                       ),
-                      SizedBox(height: 19),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'About Doctor',
-                          style: TextStyles.s16w400black,
-                        ),
-                      ),
-                      SizedBox(height: 12),
-                      Text(
-                        """Dr. Kawsar Ahmed is the top most Cardiologist
-specialist in Cumilla Medical Collage Hospital At
-Cumilla. He achived several awards foe his
-wonderful confriution in his own field. He is
-avaliable for privet consulatation. He achived
-several awards foe his wonderful confriution in
-his own field. He is avaliable for privet
-consulatation. """,
-                        style: TextStyles.s14w400black,
-                      ),
-                      SizedBox(height: 12),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Recent comments',
-                          style: TextStyles.s16w400black,
-                        ),
-                      ),
-                      SizedBox(height: 12),
-                      ListTile(
-                        leading: CircleAvatar(
-                          backgroundColor: AppColors.black,
-                        ),
-                        title: Row(
-                          spacing: 2,
-                          mainAxisSize: MainAxisSize.min,
-                          children: List.generate(
-                            5,
-                            (index) =>
-                                SvgPicture.asset('assets/svg/staryellow.svg'),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
+                    )
+                  ],
                 ),
               ),
             ],
